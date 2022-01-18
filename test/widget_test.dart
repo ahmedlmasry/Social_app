@@ -7,17 +7,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:groub/layout/news_app/news_layout/news_layout.dart';
+import 'package:groub/layout/social%20app/social%20layout/social_layout.dart';
 
 import 'package:groub/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp(
-      isDark: true,
-      startWidget: NewsLayout(),
-    ));
+    await tester.pumpWidget(MyApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
