@@ -45,8 +45,6 @@ void main() async {
   DioHelper.init();
   await CacheHelper.init();
 
-  Widget widget;
-
   uId = CacheHelper.getData(key: 'uId');
 
   runApp(MyApp());
