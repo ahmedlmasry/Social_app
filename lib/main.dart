@@ -1,18 +1,14 @@
-import 'package:bloc/bloc.dart';
-import 'package:desktop_window/desktop_window.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:groub/layout/social%20app/cubit/states.dart';
 import 'package:groub/layout/social%20app/social%20layout/social_layout.dart';
 
-import 'package:groub/modules/social/social_login/social_login.dart';
 import 'package:groub/shared/components/bloc_observer.dart';
 import 'package:groub/shared/components/constants.dart';
 import 'package:groub/shared/network/local/cache_helper.dart';
-import 'package:groub/shared/network/remote/dio_helper.dart';
 import 'package:groub/shared/styles/themes.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+
 import 'layout/social app/cubit/cubit.dart';
 
 // Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
@@ -42,7 +38,7 @@ void main() async {
   // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
   Bloc.observer = MyBlocObserver();
-  DioHelper.init();
+
   await CacheHelper.init();
 
   uId = CacheHelper.getData(key: 'uId');

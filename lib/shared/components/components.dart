@@ -1,13 +1,5 @@
-//import 'package:conditional_builder/conditional_builder.dart';
-import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-//import 'package:groub/modules/web%20view/web_view.dart';
-//import 'package:flutter/semantics.dart';
-import 'package:groub/shared/styles/colors.dart';
-//import 'package:webview_flutter/webview_flutter.dart';
 
 Widget defaultButton(
         {double width = double.infinity,
@@ -25,7 +17,7 @@ Widget defaultButton(
         },
         child: Text(
           isUpperCase ? text.toUpperCase() : text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
         ),
