@@ -37,13 +37,15 @@ void main() async {
   // });
   // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
-  Bloc.observer = MyBlocObserver();
-
   await CacheHelper.init();
 
   uId = CacheHelper.getData(key: 'uId');
-
-  runApp(MyApp());
+  BlocOverrides.runZoned(
+    () {
+      runApp(MyApp());
+    },
+    blocObserver: MyBlocObserver(),
+  );
 }
 
 class MyApp extends StatelessWidget {
